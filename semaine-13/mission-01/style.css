@@ -1,0 +1,17 @@
+.titre{
+
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ color: darkgreen;
+ 
+}
+
+
+.page{
+        background-color: antiquewhite;
+}
+
+.image {
+
+    max-width: 200px;
+    border-radius: 20px 20px 20px 20px;
+}
