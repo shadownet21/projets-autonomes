@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="page">
-    <h1 class="titre">Marc Maurice</h1>
-    <h2 class="titre">Développeur web</h2>
-    <p>
+    <div class="header">
+      <h1 class="titre">Marc Maurice</h1>
+      <h2 class="titre">Développeur web</h2>
+    </div>
+
+    <p class="content">
       J’ai 30 ans et j’habite à Longueuil, où je travaille comme développeur
       web. Je crée et améliore des sites et applications en cherchant à allier
       performance, simplicité et expérience utilisateur. Passionné par les
@@ -25,9 +28,70 @@
     <h2 class="titre">Image libre de droit</h2>
     <img
       src="https://thumbs.dreamstime.com/blog/2018/02/can-i-use-images-google-images-23081-image2313069.jpg"
-      alt="tournesol" class="image"
+      alt="tournesol"
+      class="image"
     />
     <h2 class="titre">Lien vers un site externe</h2>
     <a href="https://google.com" target="_blank">Visiter google</a>
+
+    <!-- le formulaire à commiter -->
+    <h2>Apprenons à nous connaître</h2>
+    <form action="index.html">
+      <br />
+      <label for="">Nom</label>
+      <input type="text" name="" id="" /><br /><br />
+      <label for="">Courriel</label>
+      <input type="text" name="" id="" /><br /><br />
+      <label for="">Couleur préféré</label>
+      <select name="" id="">
+        <option value="">Choisir une couleur</option>
+        <option value="bleu">Bleu</option>
+        <option value="blanc">Blanc</option>
+        <option value="vert">Vert</option></select
+      ><br /><br />
+      <label for="">Plat(s) préféré(s)</label>
+      <select name="plats" multiple>
+        <option value="spaghetti">Spaghetti</option>
+        <option value="pizza">Pizza</option>
+        <option value="poutine">Poutine</option></select
+      ><br />
+      <fieldset>
+        <legend>Animal préféré</legend>
+        <input type="radio" name="fav_animal" value="chat" />
+        <label for="chat">Chat</label>
+        <input type="radio" name="fav_animal" value="chien" />
+        <label for="chat">Chien</label>
+        <input type="radio" name="fav_animal" value="perruche" />
+        <label for="chat">Peruche</label>
+      </fieldset>
+      <label for="">Commentaires</label>
+      <textarea
+        name="commentaires"
+        placeholder="Écrivez nous un petit mot..."
+      ></textarea
+      ><br /><br />
+      <input type="button" value="Envoyer mes réponses" />
+      <input type="reset" value="Réinitialisé le formulaire" />
+    </form>
+    <hr />
+    <p>
+      Lorem <b>ipsum dolor</b>, sit amet <b>consectetur</b> adipisicing elit. Quae animi
+      necessitatibus ipsa perspiciatis adipisci rerum ea omnis, vel veniam
+      cupiditate enim, aliquid nisi provident, non corporis soluta officiis odio
+      minima.
+    </p>
+    <p>
+      Lorem <b>ipsum dolor</b>, sit amet <b>consectetur</b> adipisicing elit. Quae animi
+      necessitatibus ipsa perspiciatis adipisci rerum ea omnis, vel veniam
+      cupiditate enim, aliquid nisi provident, non corporis soluta officiis odio
+      minima.
+    </p>
+    <p>
+      Lorem <b>ipsum dolor</b>, sit amet <b>consectetur</b> adipisicing elit. Quae animi
+      necessitatibus ipsa perspiciatis adipisci rerum ea omnis, vel veniam
+      cupiditate enim, aliquid nisi provident, non corporis soluta officiis odio
+      minima.
+    </p>
+      
   </body>
 </html>
