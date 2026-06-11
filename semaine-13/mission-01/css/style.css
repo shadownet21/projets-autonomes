@@ -1,0 +1,45 @@
+
+.titre{
+
+ font-family: "Playwrite AU VIC Guides", cursive;
+ color: darkgreen;
+ 
+}
+
+
+.page{
+        background-color: rgb(241, 230, 216);
+}
+
+.image {
+
+    width: 200px;
+    height: 100px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.content{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.liste{
+    border: 2px solid black;
+    background-color: darkgray;
+    padding: 50px;
+}
+
+a{
+    font-size: 35px;
+    text-decoration: none;
+    color: blue;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 50px;
+}

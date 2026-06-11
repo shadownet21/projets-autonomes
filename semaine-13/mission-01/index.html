@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Ta+Police:wght@400;700&display=swap" rel="stylesheet">
+     
+ 
   </head>
   <body class="page">
     <div class="header">
@@ -20,7 +26,7 @@
       nouveaux défis techniques.
     </p>
     <h2 class="titre">Compétences</h2>
-    <ul>
+    <ul class="liste">
       <li>HTML5</li>
       <li>CSS3</li>
       <li>Javascript</li>
@@ -34,29 +40,29 @@
     <h2 class="titre">Lien vers un site externe</h2>
     <a href="https://google.com" target="_blank">Visiter google</a>
 
-   <hr>
-    <h2>Apprenons à nous connaître</h2>
-    <form action="index.html" id="formulaire">
+    <hr />
+    <h2 class="titre">Apprenons à nous connaître</h2>
+    <div class="content">
+            <form action="index.html" id="formulaire">
       <br />
       <label for="">Nom</label><br />
       <input type="text" name="" id="" /><br />
-      <label for="courriel">Courriel</label><br>
-      <input type="email" name="" id="" /><br>
-      <label for="couleur">Couleur préféré</label><br>
+      <label for="courriel">Courriel</label><br />
+      <input type="email" name="" id="" /><br />
+      <label for="couleur">Couleur préféré</label><br />
       <select name="" id="">
         <option value="">Choisir une couleur</option>
-         <optgroup label="Classe 1">
-            <option value="bleu">Bleu</option>
-            <option value="blanc">Blanc</option>
-         </optgroup>
-         <optgroup  label="Classe 2">
-            <option value="vert">Vert</option>
-            <option value="jaune">Jaune</option>
-         </optgroup>
-       
-        </select><br /><br />
-     
-      <label for="">Plat(s) préféré(s)</label><br>
+        <optgroup label="Classe 1">
+          <option value="bleu">Bleu</option>
+          <option value="blanc">Blanc</option>
+        </optgroup>
+        <optgroup label="Classe 2">
+          <option value="vert">Vert</option>
+          <option value="jaune">Jaune</option>
+        </optgroup></select
+      ><br /><br />
+
+      <label for="">Plat(s) préféré(s)</label><br />
       <select name="plats" multiple>
         <option value="spaghetti">Spaghetti</option>
         <option value="pizza">Pizza</option>
@@ -71,7 +77,7 @@
         <input type="radio" name="fav_animal" value="perruche" />
         <label for="chat">Peruche</label>
       </fieldset>
-      <label for="">Commentaires</label><br>
+      <label for="">Commentaires</label><br />
       <textarea
         name="commentaires"
         placeholder="Écrivez nous un petit mot..."
@@ -80,6 +86,8 @@
       <input type="button" value="Envoyer mes réponses" />
       <input type="reset" value="Réinitialisé le formulaire" />
     </form>
+
+    
     <hr />
     <p>
       Lorem <b>ipsum dolor</b>, sit amet <b>consectetur</b> adipisicing elit.
@@ -99,5 +107,6 @@
       veniam cupiditate enim, aliquid nisi provident, non corporis soluta
       officiis odio minima.
     </p>
+</div>
   </body>
 </html>
