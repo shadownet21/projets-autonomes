@@ -61,6 +61,19 @@ a:hover {
     display: flex;
     gap: 15px;
 }
+nav ul li{
+    padding: 50px;
+}
+
+#section_trois {
+  display: flex;
+  gap: 20px; /* espace entre les paragraphes */
+}
+
+#section_trois p {
+  
+  text-align: justify;
+}
 /* .page{
     border: 25px solid rgb(59, 202, 186);
     margin-left: 500px;
