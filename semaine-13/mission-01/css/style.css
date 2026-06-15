@@ -43,3 +43,16 @@ a:hover {
     text-transform: capitalize;
     font-size: 50px;
 }
+
+.sections_links{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+/* .page{
+    border: 25px solid rgb(59, 202, 186);
+    margin-left: 500px;
+    border-radius: 20px 20px 20px 20px;
+    margin-right: 500px;
+} */
+
+ 
