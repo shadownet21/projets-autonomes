@@ -1,0 +1,136 @@
+#logo{
+   width: 100px;
+}
+
+.logo_titre{
+    display: flex;
+}
+
+nav {
+    display: flex;
+    background-image: linear-gradient(rgb(217, 217, 116), rgb(231, 104, 104), red);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+   
+}
+
+.introduction, main, .page{
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer{
+    margin-top: auto;
+    position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+ 
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+nav p{
+   margin-left: 485px;
+   display: flex;
+}
+
+#top {
+margin-left: auto; /* Pousse toute la liste vers la droite */
+}
+
+.images-presentation {
+  display: flex;
+  justify-content: space-around; /* Espace les colonnes équitablement */
+  align-items: center;
+  gap: 20px; /* Espace entre les cartes */
+  padding: 20px;
+}
+
+.card {
+  flex: 1; /* Chaque carte prend la même largeur */
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.card img {
+  max-width: 100%; /* L'image ne déborde pas de la carte */
+  height: 150px;
+  width: 150px; /* Taille fixe pour l'uniformité */
+}
+
+.horreur-cosmique, .influence {
+  justify-content: right;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgb(70, 190, 190);
+}
+
+.horreur-cosmique-influence {
+    display: flex;
+    gap: 10px;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+summary {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  font-weight: bold;
+  list-style: none; /* Supprime la petite flèche par défaut */
+}
+
+/* Ajout d'une flèche personnalisée */
+summary::after {
+  content: "▼";
+  float: right;
+}
+
+details[open] summary::after {
+  content: "▲";
+}
+
+.content {
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  
+}
+
+/* 
+img {
+
+width : 200px;
+aspect-ratio : 1/2; longeur/hauteur
+object-fit : cover;
+sca
+}
+
+*/
+
