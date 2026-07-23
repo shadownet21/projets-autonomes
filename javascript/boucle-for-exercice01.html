@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>
+    Excercices pour la boucle <span style="color: green;">for</span> <br>
+    <i style="color: rgb(9, 50, 145);">Confer console</i>
+</h1>
+ 
+
+    <script>
+         let animaux = ["Chat", "Chien", "Lapin"];
+
+         let langues = ["Francais", "Anglais", "Latin", "Japonais", "Espagnol", "Grec", "Chinois"];
+
+    // Utiliser une boucle for
+    // afficher chaque animal dans la console
+
+        for ( i=0; i < 3; i++){
+            console.log(animaux[i]);
+                    }
+
+        console.log("=============Deuxième possibilité==================");
+       
+        
+                    for (i = 2; i >= 0; i--) {
+                        console.log(animaux[i]);
+                    }
+        console.log("=============Troisième possibilité==================");
+
+                animaux.forEach(animal => {
+                    console.log(animal);
+                })
+        console.log("=============Quatrième possibilité==================");
+
+        for (l = 0; l < langues.length; l++){
+                console.log(langues[l]);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <body>
+
+                    <div style="display: flex; gap: 50px;">
+                        <div 
+                                id="boite"
+                                style="background-color: rgb(255, 0, 0); width: 100px; height: 100px"
+                                >
+                                </div>
+
+                           
+                    </div>
+            
+
+ 
+   
+
+    <br>
+
+    <button id="monBoutonRouge">Augmenter l'intensité du rouge</button>
+    <button id="monBoutonVert">Augmenter l'intensité du vert</button>
+    <button id="monBoutonBleu">Augmenter l'intensité du bleu</button>
+   
+
+    <script>
+    
+       
+        
+         const bouton_rouge = document.querySelector("#monBoutonRouge");
+         const bouton_vert = document.querySelector("#monBoutonVert");
+         const bouton_bleu = document.querySelector("#monBoutonBleu");
+
+         let rouge = 0;
+         let vert = 0;
+         let bleu = 0;
+
+         bouton_rouge.addEventListener("click",  () => {
+
+             
+               for (let i = 0; i < 5; i++) {
+         
+                  rouge++;
+
+                        if (rouge > 255) {
+                            rouge = 0;
+                        }
+         
+                    }
+                    
+                    console.log(`rgb(${rouge},0,0)`);
+            
+             boite.style.backgroundColor = `rgb(${rouge},0,0)`;
+        
+
+    });
+
+             bouton_vert.addEventListener("click",  () => {
+
+       
+         
+               for (let i = 0; i < 5; i++) {
+         
+                  vert++;
+
+                        if (vert > 255) {
+                            vert = 0;
+                        }
+         
+                    }
+                    
+                    console.log(`rgb(0,${vert},0)`);
+            
+             boite.style.backgroundColor = `rgb(0,${vert},0)`;
+        
+
+    });
+
+                 bouton_bleu.addEventListener("click",  () => {
+
+       
+         
+               for (let i = 0; i < 5; i++) {
+         
+                  bleu++;
+
+                        if (bleu > 255) {
+                            bleu = 0;
+                        }
+         
+                    }
+                    
+                    console.log(`rgb(0,0,${bleu})`);
+            
+             boite.style.backgroundColor = `rgb(0,0,${bleu})`;
+        
+
+    });
+
+
+
+
+
+
+    </script>
+</body>
+</html>

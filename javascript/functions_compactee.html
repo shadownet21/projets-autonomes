@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <body>
+
+                    <div style="display: flex; gap: 50px;">
+                        <div 
+                                id="boite"
+                                style="background-color: rgb(255, 0, 0); width: 100px; height: 100px"
+                                >
+                                </div>
+
+                           
+                    </div>
+            
+
+ 
+   
+
+    <br>
+
+    <button id="monBoutonRouge">Augmenter l'intensité du rouge</button>
+    <button id="monBoutonVert">Augmenter l'intensité du vert</button>
+    <button id="monBoutonBleu">Augmenter l'intensité du bleu</button>
+    <script>
+    
+       /* 
+                    DÉCLARATION DES VARAIBLES ET CONSTANTES
+       */
+        
+         const bouton_rouge = document.querySelector("#monBoutonRouge");
+         const bouton_vert = document.querySelector("#monBoutonVert");
+         const bouton_bleu = document.querySelector("#monBoutonBleu");
+    
+
+         let rouge = 0;
+         let vert = 0;
+         let bleu = 0;
+
+       /* 
+        * DÉCLARATION DE MA FUNCTION 
+        * Fonction qui prend la couleur cliqué et augmente son intensité en fonction de l'emplacement de son code hexadecimal
+        * @param couleurATraiter : String
+       */
+        // Qu'est ce qui se répète : La boucle for, l'assignation de la couleur augmentée à ma boite
+
+        //On va écrire une fonction pour changer la couleur 
+
+           // Qu'est ce qui se répète : La boucle for, l'assignation de la couleur augmentée à ma boite
+
+        //On va écrire une fonction pour changer la couleur 
+
+        function changerCouleur(typeCouleur) {
+
+            console.log(typeCouleur);
+            
+
+            if (typeCouleur === "rouge") {
+
+                    rouge =  (rouge + 5) > 255 ? 0 : rouge + 5; 
+                    //veut dire d'ajouter 5 à la couleur jusqu'à atteindre 255; si on depasse on réiinitialise. 
+                     
+
+            } else if (typeCouleur === "vert") {
+
+                    vert = (vert + 5) > 255 ? 0 : vert + 5;
+                     
+
+            } else if (typeCouleur === "bleu") { 
+
+                    bleu = (bleu + 5) > 255 ? 0 : bleu + 5;
+                     
+            }
+            console.log(`rgb(${rouge},${vert},${bleu})`);
+            
+            //Appliquer la combinaison de couleur de à la boite
+
+            boite.style.backgroundColor = `rgb(${rouge},${vert},${bleu})`;
+        }
+
+         bouton_rouge.addEventListener("click" , () => changerCouleur("rouge"));
+         bouton_vert.addEventListener("click" , () => changerCouleur("vert"));
+         bouton_bleu.addEventListener("click" , () => changerCouleur("bleu"));
+
+
+    </script>
+</body>
+</html>

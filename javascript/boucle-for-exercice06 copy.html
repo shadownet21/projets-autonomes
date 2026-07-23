@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eléments pairs et impairs</h1>
+ 
+   
+    <script>
+        let original = [5, 10, 15, 36, 75, 95, 80, 63, 100, 88, 91, 70];
+        let pairs = [];
+        let impairs = [];
+    
+
+    // À l'aide d'une boucle, copier chaque valeur de original dans copie
+    // afficher les deux tableaux
+        for ( i = 0; i < original.length; i++ ) {
+
+            if (original[i] % 2 == 0) {
+
+                pairs.push(original[i]);
+
+                console.log("Insertion de la valeur " + original[i] + " dans le tableau pair");
+
+            } else {
+
+                  impairs.push(original[i]);
+
+                console.log("Insertion de la valeur " + original[i] + " dans le tableau impair");
+
+            }
+
+        }
+
+        console.log("Voici le contenu du tableau des chiffres pairs: " + pairs);
+        console.log("Voici le contenu du tableau des chiffres impairs: " + impairs);
+        
+   
+     
+    </script>
+</body>
+</html>

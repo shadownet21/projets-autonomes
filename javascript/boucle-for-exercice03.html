@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Compter les scores supérieurs ou égal à 10 et afficher le résultat.</h1>
+    <p id="pa"></p>
+  
+    <script>
+        let scores = [12, 8, 17, 5, 20];
+        let compteur = 0;
+
+       for ( i =  0; i < scores.length; i++){
+
+                if( scores[i] >= 10 ) {
+                    compteur++;
+                    console.log(scores[i] + " est supérieur à 10");
+                }
+       }
+
+      console.log("Au final on a "+ compteur + " scores qui sont supérieurs à 10.");
+
+    </script>
+</body>
+</html>

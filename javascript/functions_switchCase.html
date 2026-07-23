@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <body>
+
+                    <div style="display: flex; gap: 50px;">
+                        <div 
+                                id="boite"
+                                style="background-color: rgb(255, 0, 0); width: 100px; height: 100px"
+                                >
+                                </div>
+
+                           
+                    </div>
+            
+
+ 
+   
+
+    <br>
+
+    <button id="monBoutonRouge">Augmenter l'intensité du rouge</button>
+    <button id="monBoutonVert">Augmenter l'intensité du vert</button>
+    <button id="monBoutonBleu">Augmenter l'intensité du bleu</button>
+    <script>
+    
+       /* 
+                    DÉCLARATION DES VARAIBLES ET CONSTANTES
+       */
+        
+         const bouton_rouge = document.querySelector("#monBoutonRouge");
+         const bouton_vert = document.querySelector("#monBoutonVert");
+         const bouton_bleu = document.querySelector("#monBoutonBleu");
+    
+
+         let rouge = 0;
+         let vert = 0;
+         let bleu = 0;
+
+       /* 
+        * DÉCLARATION DE MA FUNCTION 
+        * Fonction qui prend la couleur cliqué et augmente son intensité en fonction de l'emplacement de son code hexadecimal
+        * @param typeCouleur : String (rouge/vert/bleu)
+        * sortie rgb({valeur_type_couleur_rouge}, {valeur_type_couleur_verte}, {valeur_type_couleur_bleue})
+ 
+        */
+
+        function changerCouleur(typeCouleur){
+          
+          switch (typeCouleur) {
+  
+                  case "rouge" :  rouge =  (rouge + 15) > 255 ? 0 : rouge + 15; 
+                  break;
+                  
+                  case "vert" :  vert =  (vert + 15) > 255 ? 0 : vert + 15; 
+                  break;
+  
+                  case "bleu" :  bleu =  (bleu + 15) > 255 ? 0 : bleu + 15; 
+                  break;
+  
+          }
+                 boite.style.backgroundColor = `rgb(${rouge}, ${vert}, ${bleu})`;
+        }
+
+         bouton_rouge.addEventListener("click" , () => changerCouleur("rouge"));
+         bouton_vert.addEventListener("click" , () => changerCouleur("vert"));
+         bouton_bleu.addEventListener("click" , () => changerCouleur("bleu"));
+
+
+ 
+
+    </script>
+</body>
+</html>

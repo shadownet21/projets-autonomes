@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ajout des élements à un tableau vide.</h1>
+    <p id="pa"></p>
+  
+    <script>
+        let original = [5, 10, 15];
+        let copie = [];
+
+    // À l'aide d'une boucle, copier chaque valeur de original dans copie
+    // afficher les deux tableaux
+        for ( let i = 0; i < original.length; i++ ) {
+
+            val_tableau_o = original[i];
+
+            copie.push(val_tableau_o);
+
+            console.log("Insertion dans le tableau copie de la valeur : " + original[i]);
+
+        }
+
+        console.log("Voici le contenu de la copie du tableau : " + copie);
+        console.log(copie);
+
+    </script>
+</body>
+</html>

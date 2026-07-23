@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Concaténation.</h1>
+    <p id="pa"></p>
+  
+    <script>
+         let mots = ["Bonjour", "tout", "le", "monde"];
+         let phrase = "";
+        
+
+    // Construire une phrase avec les mots
+    // afficher la phrase finale
+    //rajouter un point à la fin mais dans la boucle
+
+        for ( i = 0; i < mots.length; i++ ) {
+
+            phrase = phrase + " " + mots[i];
+
+            if ( i == mots.length - 1 ) {
+
+                    phrase = phrase + '.';
+                    
+            }
+        }
+            console.log(phrase);
+    </script>
+</body>
+</html>
