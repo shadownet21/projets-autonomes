@@ -117,11 +117,12 @@ body {
          height: 500px;
          border: 1px solid black;
          overflow: hidden;
+         margin-right : 50px;
        
 }
 
 .banner img {
-    width: 2100px;
+    width: 2070px;
     height: 700px;
     object-fit: cover;
     object-position: left center;
@@ -140,6 +141,7 @@ body {
 .dispatch {
 
         display: flex;
+      
 
 }
 
