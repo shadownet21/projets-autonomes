@@ -234,6 +234,47 @@ color: #C4622D;
         outline-offset: 2px;
         }
 /* -***************************************************** */
+
+
+/* ************************************EQUIPES*****************/
+.equipe-main h2 {
+        margin-left: 400px;
+        text-align: center;
+}
+
+.equipe-main {
+        display: flex;
+        flex-direction: column;
+         
+}
+
+.junior {
+        margin-left: 300px;
+        display: flex;
+        gap: 20px;
+}
+.club-junior {
+        width: 300px;
+        height: 400px;
+        background-color: #eff1f7;
+        border-radius: 6px;
+        display: grid;
+        
+} 
+
+.club-junior img {
+        width: 300px;
+        height: 300px;
+}
+
+.description-img  {
+        color: black;
+        text-align: justify;
+        padding: 10px;
+        font-size: 12px;
+}
+
+/* ************************************EQUIPES*****************/
 .banner {
          width: 200px; /* vw = viewport width (largeur de l'écran) */
          height: 500px;
