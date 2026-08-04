@@ -123,17 +123,19 @@
 
 
         <div class="form">
-          <label for="">Nom : </label>
-          <input type="text" placeholder="Entrez votre nom" id="" />
-          <label for="">Prénom : </label>
-          <input type="text" placeholder="Entrez votre prénom" id="" />
-          <label for="">Numéro de téléphone : </label>
-          <input type="number" placeholder="Entrez votre numéro" id="" />
-          <label for="">Entrez votre message : </label>
-          <textarea placeholder="Entrez votre message" rows="5">
-          </textarea>
-
-          <button id="submitForm" class="bouton">Envoyer</button>
+          <form action="">
+            <span id="all"></span>
+            <label for="">Nom : </label> <span id="message-nom"></span>
+            <input type="text" placeholder="Entrez votre nom" id="nom" />
+            <label for="">Prénom : </label> <span id="message-prenom"></span>
+            <input type="text" placeholder="Entrez votre prénom" id="prenom" />
+            <label for="">Numéro de téléphone : </label> <span id="message-tel"></span>
+            <input type="number" placeholder="Entrez votre numéro" id="tel" />
+            <label for="">Entrez votre message : </label> <span id="message-checker"></span>
+            <textarea  rows="5" id="message">
+            </textarea>
+            <button id="submitForm" class="bouton" type="button">Envoyer</button>
+          </form>
         </div>
         </div>
      
