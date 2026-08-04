@@ -64,6 +64,10 @@ body {
     box-sizing: border-box;
 }
 
+.active a {
+color: #C4622D;
+}
+
 
 .image-logo {
         width: 180px;
