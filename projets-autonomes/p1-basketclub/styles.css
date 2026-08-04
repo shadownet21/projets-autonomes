@@ -33,10 +33,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    box-sizing: border-box;
     background-color: var(--couleur-blanc);
     border-bottom: 1px solid var(--couleur-bordure);
-
+    box-sizing: border-box; 
          
 }
 
@@ -95,6 +94,16 @@ body {
                         padding: 5px;
 } 
 
+.sidebar-contact {
+
+                        width: 300px;
+                        height: 900px;
+                        margin-left: 5%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        padding: 5px;
+}
 
 .actualites {
 
@@ -111,7 +120,116 @@ body {
          color: var(--couleur-sombre);
          padding: 15px;
 }
+/* ************************************Contact *******************/
+.actualites-contact {
+                width: 300px;
+                height: 600px;
+                border-radius: 6px;
+                background-color: var(--couleur-bordure);
+                color: var(--couleur-sombre);
+                padding-bottom: 5px; 
+                padding-left: 15px;
+                padding-bottom: 15px;
+                
+}
 
+.actualites-contact p {
+        color: black;
+}
+
+.contact-main {
+        width: 100%;  
+        height: 500px;
+        margin-left: 30px;
+        box-sizing: border-box; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+}
+
+.form {
+                display: flex;
+                flex-direction: column;
+                margin-left: 100px;
+                gap: 5px;
+                align-items: center;
+}
+
+.form input, textarea {
+        width: 500px;
+        height: 30px;
+        border-radius: 6px;
+}
+
+
+.form label {
+        display: flex;
+}
+
+.apropos p{
+        color: black;
+        text-align: justify;
+}
+
+.qui-sommes-nous {
+
+        width: 300px;
+        height: 200px;
+}
+
+.apropos {
+        display: flex;
+         margin-left: 250px;
+}
+
+.texte-apropos p {
+        width: 100vh;
+        line-height: 1.6;
+}
+
+.form-image {
+        width: 350px;
+        height: 250px;
+}
+
+.mon-formulaire {
+        display: flex;
+        margin-left: 250px;
+}
+
+.bouton {
+        width: 200px;
+        height: 50px;
+        margin-top: 50px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: sans-serif;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+}
+
+ 
+        .bouton:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);  
+        }
+
+        
+        .bouton:active {
+        transform: translateY(0);  
+        }
+
+        
+        .bouton:focus-visible {
+        outline: 3px solid #80bdff;
+        outline-offset: 2px;
+        }
+/* -***************************************************** */
 .banner {
          width: 200px; /* vw = viewport width (largeur de l'écran) */
          height: 500px;
@@ -141,8 +259,6 @@ body {
 .dispatch {
 
         display: flex;
-      
-
 }
 
 .texte-image {
@@ -269,12 +385,9 @@ height: 400px;
 }
 
 
- 
-
-
-
-
 /* PAGE CONTENEUR */
+
+/* -------------------------------FOOTER ------------------------------------------- */
 
 .footer {
                 display: flex;
@@ -287,24 +400,518 @@ height: 400px;
  
 } 
 
-.footer ul {
-       
-        margin: 30px;
-        padding-top: 45px;
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
-        gap: 100px;
-        font-family: var(--police-titre);
-        font-size: var(--police-titre-size);
+.footer {
+    width: 100%;
+    min-height: 200px;
+    margin-top: 20px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    background-image: linear-gradient(
+        to right,
+        #efefe6,
+        #597bec,
+        var(--couleur-accent)
+    );
+
+    text-align: center;
 }
 
-header, footer a {
-        text-decoration: none;
+.footer ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    list-style-type: none;
+    font-family: var(--police-titre);
+    font-size: var(--police-titre-size);
+}
+
+header a,
+footer a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .image-logo-footer {
-        width: 180px;
-        height: 150px;
-        margin-top: 30px;
+    width: 180px;
+    height: auto;
+    display: block;
 }
+
+/* ******************************************MEDIA QUERIES********************************** */
+
+/* média queries pour le footer */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-logo-footer {
+        width: 140px;
+    }
+}
+
+
+/* =====================================================
+   TABLETTES ET PETITS ÉCRANS
+===================================================== */
+
+@media (max-width: 992px) {
+
+    :root {
+        --police-titre-rubrique: 38px;
+    }
+
+    /* HEADER ET NAVIGATION */
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav {
+        height: auto;
+        min-height: 100px;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+
+    .image-logo {
+        width: 140px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    /* CONTENU PRINCIPAL ET SIDEBAR */
+
+    .dispatch {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sidebar,
+    .sidebar-contact {
+        width: 90%;
+        height: auto;
+        margin: 30px auto;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .actualites,
+    .actualites-contact {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    /* BANNER */
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        margin: 0;
+        border: none;
+    }
+
+    .banner img {
+        position: static;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .texte-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 85%;
+        padding: 20px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .texte-image h1 {
+        font-size: 38px;
+    }
+
+    .texte-image p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* PROGRAMMES */
+
+    .container {
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .programmes {
+        width: 90%;
+        margin: 60px auto 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .card,
+    .card-coach {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-card,
+    .coach-images {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-coach {
+        min-height: 750px;
+    }
+
+    /* AIRES DE JEU */
+
+    .aires {
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .aire-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .aires-images {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    /* À PROPOS */
+
+    .apropos,
+    .mon-formulaire {
+        width: 90%;
+        margin: 30px auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .texte-apropos p {
+        width: 100%;
+    }
+
+    .qui-sommes-nous {
+        width: 100%;
+        height: auto;
+    }
+
+    /* FORMULAIRE */
+
+    .contact-main {
+        width: 90%;
+        height: auto;
+        margin: 30px auto;
+    }
+
+    .form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form input,
+    .form textarea {
+        width: 100%;
+        max-width: 500px;
+        box-sizing: border-box;
+    }
+
+    .form-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+
+/* =====================================================
+   TÉLÉPHONES
+===================================================== */
+
+@media (max-width: 768px) {
+
+    :root {
+        --police-titre-size: 17px;
+        --police-titre-rubrique: 32px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+
+    .header {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .image-logo {
+        width: 120px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .menu ul li {
+        width: 100%;
+    }
+
+    .menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* BANNER */
+
+    .banner {
+        height: 350px;
+    }
+
+    .texte-image {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .texte-image h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .texte-image p {
+        font-size: 16px;
+    }
+
+    /* TITRES */
+
+    .titre {
+        font-size: 32px;
+        padding: 0 15px;
+    }
+
+    /* PROGRAMMES */
+
+    .programmes {
+        width: 90%;
+        margin-top: 40px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        min-height: 425px;
+    }
+
+    .img-card {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* COACHS */
+
+    .card-coach {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .coach-images {
+        width: 100%;
+        height: 350px;
+    }
+
+    .description-coach h3 {
+        padding: 20px 15px 5px;
+    }
+
+    .description-coach p {
+        margin-top: 0;
+        padding: 15px;
+    }
+
+    /* AIRES DE JEU */
+
+    .aires {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .aire-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .aires-images {
+        width: 100%;
+        height: 230px;
+    }
+
+    .description-aire p {
+        padding: 18px;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar,
+    .sidebar-contact {
+        width: 90%;
+        margin: 25px auto;
+        gap: 20px;
+    }
+
+    .actualites,
+    .actualites-contact {
+        width: 100%;
+        height: auto;
+    }
+
+    /* À PROPOS */
+
+    .apropos,
+    .mon-formulaire {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .texte-apropos p {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* FORMULAIRE */
+
+    .contact-main {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .form input,
+    .form textarea {
+        width: 100%;
+    }
+
+    .form textarea {
+        min-height: 120px;
+    }
+
+    .bouton {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 25px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        flex-direction: column;
+        min-height: auto;
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-logo-footer {
+        width: 130px;
+    }
+}
+
+
+/* =====================================================
+   TRÈS PETITS TÉLÉPHONES
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .banner {
+        height: 300px;
+    }
+
+    .texte-image h1 {
+        font-size: 25px;
+    }
+
+    .texte-image p {
+        font-size: 14px;
+    }
+
+    .titre {
+        font-size: 27px;
+    }
+
+    .coach-images {
+        height: 280px;
+    }
+
+    .img-card {
+        height: 190px;
+    }
+
+    .aires-images {
+        height: 200px;
+    }
+}
+ 
