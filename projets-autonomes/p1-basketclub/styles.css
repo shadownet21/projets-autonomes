@@ -40,6 +40,10 @@ body {
          
 }
 
+.header a, .footer a {
+        text-decoration: none;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -99,10 +103,11 @@ body {
                 border-radius: 6px;
                 background-color: var(--couleur-bordure);
                 color: var(--couleur-sombre);
+                padding-bottom: 5px;
 
 }
 
-.actualites p {
+.actualites p, h3, a {
          color: var(--couleur-sombre);
          padding: 15px;
 }
