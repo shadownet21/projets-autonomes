@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>IA-BC | Contact</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
   </head>
   <body>
     <div class="header">
@@ -125,15 +126,31 @@
         <div class="form">
           <form action="">
             <span id="all"></span>
-            <label for="">Nom : </label> <span id="message-nom"></span>
-            <input type="text" placeholder="Entrez votre nom" id="nom" />
-            <label for="">Prénom : </label> <span id="message-prenom"></span>
-            <input type="text" placeholder="Entrez votre prénom" id="prenom" />
-            <label for="">Numéro de téléphone : </label> <span id="message-tel"></span>
+            <div class="form-group-nom">
+              <label for="">Nom : </label> 
+              <input type="text" placeholder="Entrez votre nom" id="nom" />
+              <span id="message-nom"></span>
+            </div>
+
+            <div class="form-group-prenom">
+               <label for="">Prénom : </label> 
+               <input type="text" placeholder="Entrez votre prénom" id="prenom" />
+               <span id="message-prenom"></span>
+            </div>
+            
+           <div class="form-group-numero">
+             <label for="">Numéro de téléphone : </label> 
             <input type="number" placeholder="Entrez votre numéro" id="tel" />
-            <label for="">Entrez votre message : </label> <span id="message-checker"></span>
+            <span id="message-tel"></span>
+           </div>
+
+           <div class="form-group-message">
+            <label for="">Entrez votre message : </label> 
             <textarea  rows="5" id="message">
             </textarea>
+            <span id="message-checker"></span>
+           </div>
+            
             <button id="submitForm" class="bouton" type="button">Envoyer</button>
           </form>
         </div>
