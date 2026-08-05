@@ -59,3 +59,4 @@
         document.querySelector("#all").classList.add("success");
     }
 });
+
