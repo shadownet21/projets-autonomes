@@ -750,6 +750,8 @@ footer a {
 .actualite-droite:hover .image-actualite {
     transform: scale(1.04);
 }
+
+
 /* ******************************************MEDIA QUERIES********************************** */
 
 /* média queries pour le footer */
