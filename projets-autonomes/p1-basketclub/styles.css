@@ -504,7 +504,7 @@ footer a {
 .actualite-main {
     width: 90%;
     margin: 40px auto;
-
+    margin-right: 60px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
@@ -557,12 +557,198 @@ footer a {
 }
 
 .bloc-complementaire {
-    min-height: 250px;
-    padding: 20px;
-    margin-left: 20px;
-    background-color: var(--couleur-bordure);
-    border-radius: 8px;
+    grid-column: 1 / -1; /* Occupe toute la largeur de la grille */
+
+    width: 100%;
+
+    min-height: 220px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    background-color: var(--color-beige);
+
     box-sizing: border-box;
+}
+
+/* ***********CSS API**** */
+.actualite-principale,
+.petite-actualite,
+.actualite-droite {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f3c88,
+            #5c6bc0
+        );
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.image-actualite {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.filtre-actualite {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(10, 20, 55, 0.85),
+        rgba(10, 20, 55, 0.15),
+        transparent
+    );
+}
+
+.contenu-actualite {
+    position: absolute;
+    z-index: 2;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 18px;
+    color: white;
+}
+
+.categorie-actualite {
+    display: inline-block;
+
+    padding: 5px 9px;
+    margin-bottom: 8px;
+
+    border-radius: 4px;
+    background-color: #e85d04;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenu-actualite h2 {
+    margin: 5px 0;
+}
+
+.date-actualite,
+.lieu-actualite,
+.description-actualite {
+    margin: 6px 0;
+}
+
+.score-actualite {
+    display: block;
+    margin: 8px 0;
+
+    font-size: 1.4rem;
+}
+
+.statut-actualite {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+.petite-actualite .description-actualite,
+.petite-actualite .lieu-actualite {
+    display: none;
+}
+
+.petite-actualite .contenu-actualite {
+    padding: 10px;
+}
+
+.petite-actualite .contenu-actualite h2 {
+    font-size: 0.85rem;
+}
+
+.etat-article {
+    padding: 20px;
+}
+
+.erreur-article {
+    color: #721c24;
+    background-color: #f8d7da;
+}
+
+
+.sans-image {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(26, 54, 120, 0.95),
+            rgba(91, 76, 190, 0.95)
+        ),
+        url("./images/logo-iabc.png");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover, 35%;
+}
+
+.contenu-indisponible {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.icone-basket {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    font-size: 2rem;
+    opacity: 0.35;
+}
+
+.petite-actualite .date-actualite,
+.petite-actualite .description-actualite,
+.petite-actualite .lieu-actualite,
+.petite-actualite .statut-actualite {
+    display: none;
+}
+
+.petite-actualite .contenu-actualite {
+    padding: 10px;
+}
+
+.petite-actualite .contenu-actualite h2 {
+    font-size: 0.82rem;
+    line-height: 1.25;
+}
+
+.petite-actualite .score-actualite {
+    font-size: 1rem;
+}
+
+.actualite-principale:hover,
+.petite-actualite:hover,
+.actualite-droite:hover {
+    transform: translateY(-3px);
+    transition: transform 0.25s ease;
+}
+
+.image-actualite {
+    transition: transform 0.4s ease;
+}
+
+.actualite-principale:hover .image-actualite,
+.petite-actualite:hover .image-actualite,
+.actualite-droite:hover .image-actualite {
+    transform: scale(1.04);
 }
 /* ******************************************MEDIA QUERIES********************************** */
 
