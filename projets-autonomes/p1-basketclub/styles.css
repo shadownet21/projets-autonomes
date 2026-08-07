@@ -99,27 +99,131 @@ body {
         list-style-type: none;
         
 }
-.sidebar {
-                        width: 300px;
-                        height: 900px;
-                        margin-left: 5%;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 50px;
-                        padding: 5px;
-} 
-
 .sidebar-contact {
+    width: 320px;
+    height: fit-content;
+    
+    padding: 20px;
 
-                        width: 300px;
-                        height: auto;
-                        margin-left: 5%;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 50px;
-                        padding: 5px;
-                        position: fixed;
-                        
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    background-color: #f8f8f8;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 20px;
+}
+
+
+/* Chaque bloc de la sidebar */
+
+.actualites-contact {
+    width: 100%;
+    height: auto;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: white;
+
+    border-radius: 10px;
+    border-left: 5px solid var(--couleur-accent);
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Petit effet au survol */
+
+.actualites-contact:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Titres */
+
+.actualites-contact h3 {
+    margin: 0 0 15px;
+
+    padding: 0;
+
+    color: var(--couleur-secondaire);
+
+    font-family: var(--police-titre);
+
+    font-size: 22px;
+}
+
+
+/* Paragraphes */
+
+.actualites-contact p {
+    margin: 10px 0;
+
+    padding: 0;
+
+    color: #444;
+
+    font-family: var(--police-corps);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* Informations importantes */
+
+.actualites-contact strong {
+    color: var(--couleur-accent);
+}
+
+
+/* Liens */
+
+.actualites-contact a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 10px 16px;
+
+    background-color: var(--couleur-accent);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: var(--police-corps);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+
+/* Hover des boutons */
+
+.actualites-contact a:hover {
+    background-color: var(--couleur-secondaire);
+
+    transform: translateY(-2px);
 }
 
 .actualites {
@@ -162,6 +266,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     font-family: sans-serif;
+    
 }
 
 /* SECTION À PROPOS */
@@ -170,6 +275,7 @@ body {
     gap: 40px; 
     align-items: center;
     margin-bottom: 60px;
+   
 }
 
 /* Version ligne par défaut, bascule en colonne sur mobile */
@@ -190,7 +296,7 @@ body {
 
 .texte-apropos {
     flex: 1.5;
-    
+    width: 80vh;
     
 }
 
@@ -250,6 +356,7 @@ body {
 .form-group label {
     font-weight: bold;
     margin-bottom: 8px;
+    color: black;
 }
 
 .form-group input, 
@@ -295,12 +402,7 @@ body {
         text-align: center;
 }
 
-.equipe-main {
-        
-        margin-left: 500px;
-     /*    border: 1px solid black; */
-      
-}
+
 
 .junior {
         margin-left: 150px;
@@ -556,7 +658,6 @@ footer a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    margin-left: 409px;
     margin-bottom: 20px;
 }
 
@@ -885,14 +986,7 @@ footer a {
     box-sizing: border-box;
     }
 
-    .sidebar,
-    .sidebar-contact {
-        width: 90%;
-        height: auto;
-        margin: 30px auto;
-        padding: 0;
-        gap: 25px;
-    }
+ 
 
     .actualites,
     .actualites-contact {
@@ -1209,7 +1303,7 @@ footer a {
 
     .contact-main {
         width: 90%;
-        margin: 20px auto;
+        
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
