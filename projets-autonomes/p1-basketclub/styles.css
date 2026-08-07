@@ -400,6 +400,7 @@ body {
 .equipe-main h2 {
         margin-left: 400px;
         text-align: center;
+        margin-top: 50px;
 }
 
 
@@ -410,7 +411,7 @@ body {
         gap: 20px;
         flex-direction: row;
         flex-wrap: wrap;
-}
+    }
 .club-junior {
         width: 300px;
         height: 400px;
@@ -444,6 +445,7 @@ body {
          flex-shrink: 1;
          min-height: 425px;
          min-width: 425px;
+         margin-left: 50px;
 }
 
 .banner img {
@@ -541,7 +543,7 @@ height: 400px;
 .description-card p {
 
         text-align: justify;
-        padding: 5px;
+        padding: 25px;
 }
 
 .img-card {
@@ -564,6 +566,12 @@ height: 400px;
         font-family: var(--police-corps);
         font-size: var(--police-titre-rubrique);
         text-align: center;
+        margin-top: 30px;
+        border-radius: 5px;
+        border: 2px solid black;
+         margin-left: 300px;
+         margin-right: 300px;
+         background-color: #eec292;
 }
 
 
@@ -573,6 +581,7 @@ height: 400px;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
         gap: 20px;
+        margin-left: 50px;
 }
 
 .aire-card {
@@ -580,6 +589,7 @@ height: 400px;
         height: 500px;
         border-radius: 6px;
         background-color: var(--couleur-fond-alt);
+         
 }
 
 .aires-images {
