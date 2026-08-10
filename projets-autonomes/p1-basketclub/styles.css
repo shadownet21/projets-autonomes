@@ -273,8 +273,10 @@ body {
 .apropos {
     display: flex;
     gap: 40px; 
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 60px;
+    flex-direction: column;
+    flex-wrap: wrap;
    
 }
 
@@ -297,7 +299,7 @@ body {
 .texte-apropos {
     flex: 1.5;
     width: 80vh;
-    
+    min-width: 400px;
 }
 
 .le-texte {
@@ -335,6 +337,7 @@ body {
     padding: 30px;
     border-radius: 8px;
     border: 1px solid #ddd;
+    
 }
 
 @media (max-width: 768px) {
@@ -416,6 +419,8 @@ body {
         margin-left: 400px;
         text-align: center;
         margin-top: 50px;
+        display: flex;
+        justify-content: center;
 }
 
 
@@ -423,7 +428,7 @@ body {
 .junior {
         margin-left: 150px;
         display: flex;
-        gap: 20px;
+        gap: 80px;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -439,6 +444,7 @@ body {
 .club-junior img {
         width: 300px;
         height: 300px;
+        border-radius: 5px 5px 0 0;
 }
 
 .description-img  {
