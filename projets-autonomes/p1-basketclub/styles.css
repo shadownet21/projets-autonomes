@@ -300,6 +300,21 @@ body {
     
 }
 
+.le-texte {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+}
+
+.le-texte.is-loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .texte-apropos p {
     margin-bottom: 15px;
     color: #080808;

@@ -1,3 +1,16 @@
+//Chargement progressif du paragraphe au raffraichissement de la page contact.
+window.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("[data-animate]");
+
+  setTimeout(() => {
+    elements.forEach((element) => {
+      element.classList.add("is-loaded");
+    });
+  }, 150);
+});
+ 
+ 
+ 
  const btnEnvoyer = document.querySelector("#submitForm");
  const champNom = document.querySelector('#nom');
  const champPrenom = document.querySelector('#prenom');
@@ -60,6 +73,7 @@
     }
 });
 
- 
+
+
 
 
