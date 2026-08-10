@@ -1,6 +1,7 @@
 const bouttonAjouter = document.querySelector("#ajouter");
 const libelleTache = document.querySelector("#libelle");
 const listeTaches = document.querySelector("#liste-taches");
+const message  = document.querySelector('#message');
 
 // On récupère les tâches déjà enregistrées
 let monTableauDeTaches = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -40,7 +41,12 @@ bouttonAjouter.addEventListener("click", () => {
   let valeurLibelleTache = libelleTache.value.trim();
 
   if (valeurLibelleTache === "") {
-    alert("Merci de renseigner une tâche");
+    let retour =  document.createElement("br");
+    message.parentNode.insertBefore(retour, message); 
+    message.textContent = "Merci de renseigner une tâche"
+    message.style.color = "red";
+    message.style.textAlign = "center";
+    message.style.fontWeight = "bold";
     return;
   }
 
