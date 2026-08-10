@@ -17,7 +17,11 @@ window.addEventListener("DOMContentLoaded", () => {
  const champNumeroTelephone = document.querySelector('#tel');
  const champMessage = document.querySelector('#message');
  const champMessageNom = document.querySelector('#message-nom');
- 
+ const champEmail = document.querySelector('#email');
+ const formulaire = document.querySelector("form"); // Adaptez le sélecteur si besoin
+ const messageEmail = document.querySelector("#message-email");
+ // Expression régulière pour valider le format standard xxxx@yyy.zzz
+ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
        btnEnvoyer.addEventListener('click', () => {
     // 1. Récupération des valeurs
@@ -25,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const prenom = champPrenom.value.trim();
     const tel = champNumeroTelephone.value.trim();
     const message = champMessage.value.trim();
+    const email = champEmail.value.trim();
 
     // 2. Réinitialisation des messages d'erreur
     document.querySelectorAll('.danger, .success').forEach(el => {
@@ -35,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let estValide = true;
 
     // 3. Cas où TOUS les champs sont vides
-    if (nom === "" && prenom === "" && tel === "" && message === "") {
+    if (nom === "" && prenom === "" && tel === "" && message === "" && email === "") {
         document.querySelector("#all").textContent = "Tous les champs sont obligatoires";
         document.querySelector("#all").classList.add("danger");
         return; // On arrête l'exécution ici
@@ -54,10 +59,19 @@ window.addEventListener("DOMContentLoaded", () => {
         estValide = false;
     }
 
-    if (tel === "") {
-        document.querySelector("#message-tel").textContent = "Merci de renseigner le numéro de téléphone";
+   if (tel === "") {
+    document.querySelector("#message-tel").textContent = "Merci de renseigner le numéro de téléphone";
+    document.querySelector("#message-tel").classList.add("danger");
+    estValide = false;
+    } else if (tel.length < 10) {
+        // Vérifie si la chaîne saisie contient moins de 10 caractères
+        document.querySelector("#message-tel").textContent = "Le numéro de téléphone doit contenir au moins 10 caractères";
         document.querySelector("#message-tel").classList.add("danger");
         estValide = false;
+    } else {
+        // Nettoie l'erreur si le champ est valide
+        document.querySelector("#message-tel").textContent = "";
+        document.querySelector("#message-tel").classList.remove("danger");
     }
 
     if (message === "") {
@@ -66,10 +80,34 @@ window.addEventListener("DOMContentLoaded", () => {
         estValide = false;
     }
 
+    if (email === "") {         
+        document.querySelector("#message-email").textContent = "Merci de renseigner votre adresse courriel";         
+        document.querySelector("#message-email").classList.add("danger");         
+        estValide = false;     
+    } else if (!emailRegex.test(email)) { 
+        // Ce bloc s'exécute si l'email n'est pas vide mais que son format est incorrect
+        document.querySelector("#message-email").textContent = "Le format de l'adresse courriel est invalide (ex: nom@domaine.com)";         
+        document.querySelector("#message-email").classList.add("danger");         
+        estValide = false; 
+    } else {
+        // Optionnel : Nettoyer le message d'erreur si l'email est correct
+        document.querySelector("#message-email").textContent = "";
+        document.querySelector("#message-email").classList.remove("danger");
+    }
+
     // 5. Validation finale
     if (estValide) {
         document.querySelector("#all").textContent = "Formulaire envoyé avec succès";
         document.querySelector("#all").classList.add("success");
+        
+       setTimeout(() => {
+        // Vide tous les champs de saisie du formulaire d'un coup
+        formulaire.reset(); 
+        
+        // Efface aussi le message de succès
+        messageEmail.textContent = "";
+        messageEmail.classList.remove("success");
+    }, 2000);
     }
 });
 
