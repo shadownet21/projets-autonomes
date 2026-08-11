@@ -61,10 +61,20 @@ table {
 }
 
 .modifier,
-.supprimer {
+.supprimer, 
+.completee {
   font-family: var(--font-stack);
 }
 
 .danger {
     color: #e21c1c;
+}
+
+.tache-completee {
+  background-color: #e8f5e9;
+}
+
+.tache-completee td:nth-child(2) {
+  text-decoration: line-through;
+  opacity: 0.7;
 }
