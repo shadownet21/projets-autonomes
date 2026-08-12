@@ -224,6 +224,30 @@ body {
     color: white;
     font-style: normal;
 }
+
+
+@media (max-width: 600px) {
+ .main-first {
+    flex-direction: column;
+    margin-left: auto;
+  }
+}
+ 
+
+.home-team-logo {
+
+        width:  200px;
+        height: 200px;
+        margin-left: 125px;
+
+}
+
+
+.visitor-team-logo {
+        width:  200px;
+        height: 200px;
+}
+
 /* Liens */
 
 .actualites-contact a {
@@ -472,13 +496,29 @@ body {
         background-color: #eff1f7;
         border-radius: 6px;
         display: grid;
-        
+        animation-name: myAnimation;
+        animation-duration: 4s;
+        animation-delay: 1s;
 } 
+
+@keyframes myAnimation {
+  0%   {background-color:rgb(236, 134, 9); left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:rgb(88, 186, 228); left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:rgb(255, 157, 0); left:0px; top:0px;}
+}
+
 
 .club-junior img {
         width: 300px;
         height: 300px;
         border-radius: 5px 5px 0 0;
+}
+
+.club-junior img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
 }
 
 .description-img  {
