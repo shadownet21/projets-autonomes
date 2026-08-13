@@ -25,7 +25,7 @@
 body {
         margin: 0;
         padding: 0;
-        background-color: #ffffff;
+        background-color: #f6f7f9;
         font-family: 'Permanent Marker', cursive;
         color: #e63946;
         letter-spacing: 0.5px;
@@ -101,7 +101,7 @@ body {
 }
 .sidebar-contact {
     width: 320px;
-    height: fit-content;
+   
     
     padding: 20px;
 
@@ -109,7 +109,7 @@ body {
     flex-direction: column;
     gap: 25px;
 
-    background-color: #f8f8f8;
+    background-color: #f6f7f9;
     border-radius: 12px;
 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -234,18 +234,57 @@ body {
 }
  
 
-.home-team-logo {
 
-        width:  200px;
-        height: 200px;
-        margin-left: 125px;
 
+.match-teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.home-team,
+.visitor-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #E8D5C4;
+    padding-top: 20px;
+}
+
+.centre {
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 125px;
+    font-weight: bold;
 }
 
 
+.game-container {
+
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+.home-team-logo,
 .visitor-team-logo {
-        width:  200px;
-        height: 200px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.visitor-team-name, .home-team-name {
+    color: black;
+}
+
+.home-team-score {
+ color: black;
+ font-weight: bold;
+
 }
 
 /* Liens */
@@ -330,7 +369,6 @@ body {
 /* SECTION À PROPOS */
 .apropos {
     display: flex;
-    gap: 40px; 
     align-items: flex-start;
     margin-bottom: 60px;
     flex-direction: column;
@@ -364,6 +402,7 @@ body {
   opacity: 0;
   transform: translateY(30px);
 
+
   transition:
     opacity 1.5s ease-out,
     transform 1.5s ease-out;
@@ -378,19 +417,25 @@ body {
 
 .texte-apropos p {
     margin-bottom: 15px;
-    color: #080808;
+      color: rgb(0, 0, 0);
     text-align: justify;
+    line-height: 20px;
 }
 
 /* SECTION FORMULAIRE */
 .contact-main h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+
+    margin-top: -35px;
 }
 
 .mon-formulaire {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
     background-color: #f9f9f9;
     padding: 30px;
@@ -767,8 +812,9 @@ footer a {
 }
 
 .zone-actualites {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 4fr 1fr;
     gap: 20px;
     margin-left: 50px;
 }
@@ -1492,6 +1538,24 @@ footer a {
     .aires-images {
         height: 200px;
     }
+}
+
+
+@media (max-width: 992px) {
+  .zone-actualites {
+    margin-left: 20px; /* Réduction de la marge pour gagner de l'espace */
+    gap: 15px;
+  }
+}
+
+/* Mobiles (Écrans inférieurs à 768px) */
+@media (max-width: 768px) {
+  .zone-actualites {
+    grid-template-columns: 1fr; /* Passage sur une seule colonne verticale */
+    margin-left: 15px; /* Marge minimale pour les petits écrans */
+    margin-right: 15px; /* Ajout d'une marge à droite pour centrer le bloc */
+    gap: 25px; /* Plus d'espace vertical entre les éléments empilés */
+  }
 }
  
 .danger {

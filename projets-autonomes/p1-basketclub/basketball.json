@@ -2,15 +2,16 @@
     "teams": [
         {
             "name": "Boston Celtics",
-            "region": "Massachusetts",
+            "region": "Massachussets",
             "city": "Boston",
             "conference": "Eastern",
             "division": "Atlantic",
             "arena": "TD Garden",
             "founded": 1946,
             "general-manager": "Brad Stevens",
-            "head-coach": "Joe Mazzulla",
-            "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786475334/BostonCelticsLogo.webp"
+
+            "head-coach": "Joe Mazzulal",
+            "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786566131/BostonCelticsLogo.webp"
         },
         {
             "name": "Brooklyn Nets",
@@ -168,18 +169,7 @@
             "head-coach": "Sean Sweeney",
             "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786477288/OrlandoMagicLogo.webp"
         },
-        {
-            "name": "Washington Wizards",
-            "region": "District of Columbus",
-            "city": "Washington",
-            "conference": "Eastern",
-            "division": "Southeast",
-            "arena": "Capital One Arena",
-            "founded": 1961,
-            "general-manager": "Will Dawkins",
-            "head-coach": "Brian Keefe",
-            "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786477288/WashingtonWizardslogo.webp"
-        },
+       
         {
             "name": "Denver Nuggets",
             "region": "Colorado",
@@ -253,7 +243,7 @@
             "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786539486/Golden_State_Warriors_logo.webp"
         },
         {
-            "name": "Los Angeles Clippers",
+            "name": "LA Clippers",
             "region": "California",
             "city": "Los Angeles",
             "conference": "Western",
@@ -263,6 +253,18 @@
             "general-manager": "Trent Redden",
             "head-coach": "Tyronn Lue",
             "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786539486/Los_Angeles_Clippers_29.webp"
+        },
+        {
+            "name": "Washington Wizards",
+            "region": "District of Columbus",
+            "city": "Washington",
+            "conference": "Eastern",
+            "division": "Southeast",
+            "arena": "Capital One Arena",
+            "founded": 1961,
+            "general-manager": "Will Dawkins",
+            "head-coach": "Brian Keefe",
+            "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786477288/WashingtonWizardslogo.webp"
         },
         {
             "name": "Los Angeles Lakers",
@@ -358,7 +360,7 @@
             "founded": 1973,
             "general-manager": "Brian Wright",
             "head-coach": "Mitch Johnson",
-            "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786540082/San_Antonio_Spurs.webp"
+            "logo": "https://res.cloudinary.com/fdssm8mg/image/upload/v1786566163/San_Antonio_Spurs.webp"
         }
     ]
 }

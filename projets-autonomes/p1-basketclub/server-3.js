@@ -45,39 +45,109 @@ function afficherData(teamsInfo, gamesInfo) {
       let home = 0;
  
       gamesInfo.forEach((game, index) => {
+
+
+                      const gameContainer = document.createElement("div");
+                      gameContainer.classList.add("game-container");
         
-        const homeTeamInfo = teamsInfo.find((team) => {
-          return team.name === game.home_team.full_name;
-        });
-        
-        console.log(homeTeamInfo);
-        
-        // LOGO POUR HOME TEAM
-        if (homeTeamInfo) {
-
-          const homeTeamLogo = document.createElement("img");
-          homeTeamLogo.classList.add("home-team-logo");
-          homeTeamLogo.classList.add(`home-team-logo-${index + 1}`);
-          homeTeamLogo.src = homeTeamInfo.logo;
-          zoneActualites.appendChild(homeTeamLogo);
-        
-        }
-
-          const visitorTeamInfo = teamsInfo.find((team) => {
-          return team.name === game.visitor_team.full_name;
-        });
+                      // Trouver l'équipe domicile
+                      const homeTeamInfo = teamsInfo.find((team) => {
+                          return team.name === game.home_team.full_name;
+                      });
 
 
-         // LOGO POUR VISITOR TEAM
-        if (visitorTeamInfo){
+                      // HOME TEAM
+                      if (homeTeamInfo) {
 
-          const visitorTeamLogo = document.createElement("img");
-          visitorTeamLogo.classList.add("visitor-team-logo");
-          visitorTeamLogo.classList.add(`visitor-team-logo-${index + 1}`);
-          visitorTeamLogo.src = visitorTeamInfo.logo;
-          zoneActualites.appendChild(visitorTeamLogo);
+                          const homeTeamDiv = document.createElement("div");
+                          homeTeamDiv.classList.add("home-team");
 
-        }
+                          const homeTeamLogo = document.createElement("img");
+
+                          homeTeamLogo.classList.add(
+                              "home-team-logo",
+                              `home-team-logo-${index + 1}`
+                          );
+
+                          homeTeamLogo.src = homeTeamInfo.logo;
+                          homeTeamLogo.alt = `Logo ${homeTeamInfo.name}`;
+
+
+                          const homeTeamName = document.createElement("p");
+
+                          homeTeamName.classList.add("home-team-name");
+                          homeTeamName.textContent = homeTeamInfo.name;
+
+
+                          const homeTeamScore = document.createElement("p");
+                          homeTeamScore.classList.add("home-team-score");
+                          homeTeamScore.textContent = game.home_team_score;
+
+
+                            homeTeamDiv.append(
+                                homeTeamLogo,
+                                homeTeamName,
+                                homeTeamScore
+                            );
+
+    gameContainer.appendChild(homeTeamDiv);
+}
+
+
+
+// Trouver l'équipe visiteuse
+const visitorTeamInfo = teamsInfo.find((team) => {
+    return team.name === game.visitor_team.full_name;
+});
+
+
+ const divDateMatch  = document.createElement("div");
+
+divDateMatch.classList.add("centre");
+divDateMatch.classList.add("badge");
+
+divDateMatch.textContent = game.date;
+
+gameContainer.appendChild(divDateMatch); 
+
+// VISITOR TEAM
+if (visitorTeamInfo) {
+
+    const visitorTeamDiv = document.createElement("div");
+    visitorTeamDiv.classList.add("visitor-team");
+
+    const visitorTeamLogo = document.createElement("img");
+
+    visitorTeamLogo.classList.add(
+        "visitor-team-logo",
+        `visitor-team-logo-${index + 1}`
+    );
+
+    visitorTeamLogo.src = visitorTeamInfo.logo;
+    visitorTeamLogo.alt = `Logo ${visitorTeamInfo.name}`;
+
+
+    const visitorTeamName = document.createElement("p");
+
+    visitorTeamName.classList.add("visitor-team-name");
+    visitorTeamName.textContent = visitorTeamInfo.name;
+
+
+    const visitorTeamScore = document.createElement("p");
+    visitorTeamScore.classList.add("home-team-score");
+    visitorTeamScore.textContent = game.visitor_team_score;
+
+    visitorTeamDiv.append(
+        visitorTeamLogo,
+        visitorTeamName,
+        visitorTeamScore
+    );
+
+    gameContainer.appendChild(visitorTeamDiv);
+}
+
+zoneActualites.appendChild(gameContainer);
+
 
     })
 }
