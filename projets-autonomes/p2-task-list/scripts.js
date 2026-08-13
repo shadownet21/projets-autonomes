@@ -99,7 +99,9 @@ bouttonAjouter.addEventListener("click", () => {
   // MODIFIER
   if (e.target.classList.contains("modifier")) {
     const index = e.target.dataset.index;
+
     const nouvelleTache = prompt("Modifier la tâche :", monTableauDeTaches[index]);
+    
     if (nouvelleTache !== null && nouvelleTache.trim() !== "") {
       monTableauDeTaches[index] = nouvelleTache.trim();
       localStorage.setItem("tasks", JSON.stringify(monTableauDeTaches));
