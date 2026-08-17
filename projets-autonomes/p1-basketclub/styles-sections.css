@@ -2,13 +2,22 @@
     padding: 60px clamp(20px, 5vw, 70px);
 }
 
-
-
 /* TEXTE */
 
- 
+.intro {
+display: flex;
+flex-direction: row;
+gap: 100px;
+margin-top: 20px;
+}
 
-.wwu-texte h2 {
+.wwu-texte {
+
+    width: 1500px;
+
+}
+
+ .wwu-texte h2 {
     margin-top: 0;
     margin-bottom: 25px;
     color: #dd7d16;
@@ -41,24 +50,19 @@
 
 .wwu-image {
     flex: 1;
-
     display: flex;
     flex-direction: column;
     gap: 20px;
-
     max-width: 100%;
     min-width: 0;
+  
 }
 
 .wwu-image img {
     width: 81%;
-  
     height: 230px;
-
     object-fit: cover;
-
     border-radius: 12px;
-
     display: block;
 }
 
@@ -101,6 +105,8 @@
     gap: 200px; /* Espace entre chaque logo */
     width: max-content;
     animation: defilement 15s linear infinite;
+    width: 1000px;
+    margin-right: 150px;
 }
 
 .partner-card {
@@ -130,4 +136,15 @@
 
     font-size: 70px;
 
+}
+
+.spe-left, .spe-right {
+    margin-left: var(--margin-left-aside);
+}
+
+.titre-p {
+    color: rgba(246, 152, 1, 0.9);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;;
+    margin-left: 60px;
 }
