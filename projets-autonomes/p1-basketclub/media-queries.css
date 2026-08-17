@@ -1,0 +1,266 @@
+/* =====================================================
+   BASE RESPONSIVE GLOBALE
+===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+    max-width: 100%;
+    font: inherit;
+}
+
+
+/* =====================================================
+   TABLETTES ET PETITS ÉCRANS
+   1024px ET MOINS
+===================================================== */
+
+@media screen and (max-width: 1024px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    main,
+    section {
+        max-width: 100%;
+    }
+
+    .container,
+    .wwu-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    h2 {
+        font-size: clamp(1.7rem, 4vw, 2.3rem);
+    }
+
+    h3 {
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+    }
+}
+
+
+/* =====================================================
+   MOBILES
+   768px ET MOINS
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main,
+    section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container,
+    .wwu-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* Transforme les grandes dispositions flex en colonne */
+    .wwu-container,
+    .footer-container,
+    .actualites-container,
+    .programmes-container,
+    .coach-container,
+    .contact-container {
+        flex-direction: column;
+    }
+
+    /* Les éléments flex prennent toute la largeur */
+    .wwu-image,
+    .wwu-texte,
+    .actualites-contact,
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Grilles */
+    .grid,
+    .cards,
+    .programmes,
+    .coach-grid,
+    .actualites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navigation */
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* Images */
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Bannière */
+    .banner {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banner h1 {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    /* Titres */
+    h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    /* Boutons */
+    button,
+    .btn {
+        max-width: 100%;
+    }
+
+    /* Tableaux */
+    table {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   PETITS MOBILES
+   480px ET MOINS
+===================================================== */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container,
+    .wwu-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .banner {
+        min-height: 320px;
+    }
+
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner p {
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    button,
+    .btn {
+        width: 100%;
+    }
+}
