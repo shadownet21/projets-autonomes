@@ -45,18 +45,21 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-right: 22px;
+
+    max-width: 100%;
+    min-width: 0;
 }
 
 .wwu-image img {
-    width: 100%;
+    width: 81%;
+  
     height: 230px;
 
     object-fit: cover;
 
     border-radius: 12px;
 
-     
+    display: block;
 }
 
 /* BOUTON */
