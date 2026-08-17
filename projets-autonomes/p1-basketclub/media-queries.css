@@ -109,6 +109,7 @@ button {
     .coach-container,
     .contact-container {
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
     /* Les éléments flex prennent toute la largeur */

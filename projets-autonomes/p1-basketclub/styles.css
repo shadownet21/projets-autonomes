@@ -706,30 +706,18 @@ height: 400px;
 
 
 /* Boite des grandes rubriques */
-.titre-section-partners {
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: var(--margin-left-aside);
-    margin-bottom: 200px;
-    background-color: white; 
-    height: 200px;
-    margin-right: var(--margin-right-aside);
-    
-}
+
 
 .titre-section-partners img {
-
     width: 200px;
     height: 200px;
-    
-
-}
+   }
 /* Boite des grandes rubriques */
 
 .partner-card {
     width: 100px;
     height: 100px;
+     
 }
 
 .partners h2 {

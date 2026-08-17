@@ -1,145 +1,147 @@
 .work-with-us {
-    padding: 60px clamp(20px, 5vw, 70px);
+  padding: 60px clamp(20px, 5vw, 70px);
 }
 
 /* TEXTE */
 
 .intro {
-display: flex;
-flex-direction: row;
-gap: 100px;
-margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-top: 20px;
 }
 
 .wwu-texte {
-
-    width: 1500px;
-
+  width: 1500px;
 }
 
- .wwu-texte h2 {
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: #dd7d16;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
+.wwu-texte h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #dd7d16;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .wwu-texte p {
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: black;
-    text-align: justify;
-    
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: black;
+  text-align: justify;
 }
 
 .wwu-highlight {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-
 /* IMAGE */
- .wwu-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.wwu-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .wwu-texte {
-    flex: 1;
+  flex: 1;
 }
 
 .wwu-image {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 100%;
-    min-width: 0;
-  
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .wwu-image img {
-    width: 81%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
+  width: 81%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 /* BOUTON */
 
 .nous-rejoindre {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 13px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: #dd7d16;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #dd7d16;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .nous-rejoindre:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
-
 .titre-section-partners {
-    overflow: hidden;
-    width: 100%;
-  /*   background: #fff;   */
-    padding: 20px 0;
-    display: flex;
+  margin-left: var(--margin-left-aside);
+  margin-right: 50px;
+
+  width: calc(100% - var(--margin-left-aside) - 185px);
+  height: 200px;
+
+  margin-bottom: 200px;
+
+  background-color: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
 }
 
 .partner-track {
-    display: flex;
-    gap: 200px; /* Espace entre chaque logo */
-    width: max-content;
-    animation: defilement 15s linear infinite;
-    width: 1000px;
-    margin-right: 150px;
+  display: flex;
+  gap: 200px;
+
+  animation: defilement 15s linear infinite;
+  width: 500px;
+  margin-right: 250px;
 }
 
 .partner-card {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .partner-card img {
-    display: flex;
-    height: 250px;  
-    width: 250px;
-    text-align: justify;
-    gap: 350px;
+  display: flex;
+  height: 250px;
+  width: 250px;
+  text-align: justify;
+  gap: 350px;
 }
 
 /* L'animation qui décale la piste de la moitié de sa largeur */
 @keyframes defilement {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
 
 .partners h2 {
-
-    font-size: 70px;
-
+  font-size: 70px;
 }
 
-.spe-left, .spe-right {
-    margin-left: var(--margin-left-aside);
+.spe-left,
+.spe-right {
+  margin-left: var(--margin-left-aside);
 }
 
 .titre-p {
-    color: rgba(246, 152, 1, 0.9);
-    font-family: 'Permanent Marker', cursive;
-    font-size: 50px;;
-    margin-left: 60px;
+  color: rgba(246, 152, 1, 0.9);
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+  margin-left: 60px;
 }
 
 .badge-danger {
@@ -183,15 +185,14 @@ margin-top: 20px;
 }
 
 .ico-nav {
-
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .banner-h1 {
-display: flex;
-flex-direction: column;
-font-size: 100px;
-margin-left: -150px;
-margin-top: -180px;
+  display: flex;
+  flex-direction: column;
+  font-size: 100px;
+  margin-left: -150px;
+  margin-top: -180px;
 }
