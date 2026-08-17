@@ -1134,6 +1134,7 @@ footer a {
 
     .menu {
         width: 100%;
+        display: inline-block;
     }
 
     .menu ul {
@@ -1188,7 +1189,6 @@ footer a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         width: 85%;
         padding: 20px;
         text-align: center;
@@ -1196,12 +1196,12 @@ footer a {
     }
 
     .texte-image h1 {
-        font-size: 38px;
+        font-size: 380px;
     }
 
     .texte-image p {
         font-size: 18px;
-        line-height: 1.5;
+        line-height: 1.5;       
     }
 
     /* PROGRAMMES */
