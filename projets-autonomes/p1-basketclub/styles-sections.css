@@ -70,20 +70,13 @@ margin-top: 20px;
 
 .nous-rejoindre {
     display: inline-block;
-
     margin-top: 20px;
-
     padding: 13px 25px;
-
     text-decoration: none;
-
     border-radius: 8px;
-
     background-color: #dd7d16;
     color: white;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
@@ -147,4 +140,44 @@ margin-top: 20px;
     font-family: 'Permanent Marker', cursive;
     font-size: 50px;;
     margin-left: 60px;
+}
+
+.badge-danger {
+  background-color: rgb(220, 97, 97);
+  color: white;
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badge-primary {
+  background-color: rgb(11, 39, 197);
+  color: white;
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badge-info {
+  background-color: rgb(84, 200, 243);
+  color: white;
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badge-secondary {
+  background-color: rgb(185, 183, 183);
+  color: rgb(0, 0, 0);
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badge-warning {
+  background-color: rgb(249, 212, 0);
+  color: black;
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
 }
