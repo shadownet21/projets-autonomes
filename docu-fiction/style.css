@@ -17,7 +17,7 @@ nav {
     align-items: center;
     gap: 30px;
     margin-left: auto;
-   
+    padding-right: 15px;
 }
 
 .badge {
@@ -99,7 +99,13 @@ margin-left: auto; /* Pousse toute la liste vers la droite */
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
-  background-color: rgb(70, 190, 190);
+  background: linear-gradient(
+    to right,
+    rgb(100, 220, 220),
+    rgb(70, 190, 190),
+    rgb(40, 150, 150)
+);
+  
 }
 
 .horreur-cosmique-influence {
@@ -107,6 +113,13 @@ margin-left: auto; /* Pousse toute la liste vers la droite */
     gap: 10px;
 }
 
+.ol-un li{
+  list-style: disc;
+}
+
+.ol-deux li{
+  list-style: disc;
+}
 .accordion {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -198,10 +211,9 @@ h1 {
 }
 
 .themes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .theme-card {
@@ -275,4 +287,17 @@ a:hover { text-decoration: underline; }
 
 .ources {
   text-align: center;
+}
+
+img {
+  text-align: center;
+  margin: 50px;
+  width: 1000px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 4px 15px rgba(83, 220, 159, 0.1);
+}
+
+.legende { 
+  text-align: center;
+  font-style: italic;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Roll</title>
+</head>
+<body>
+    <H1>Rouler les dés contre "l'ordi"</H1>
+
+    <div class="gameWindow">
+        <button class="dice">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </button>
+
+        <div>
+            <div class="user">
+                <h3>Mon résultat: </h3>
+                <p class="resultUser">(resultat)</p>
+            </div>
+            <div class="comp">
+                <h3>Résultat Ordi: </h3>
+                <p class="resultComp">(resultat)</p>
+            </div>
+        </div>
+    </div>
+    <h4 class="message"></h4>
+    <div class="score">
+        <h2 class="titleScore">Partie</h2>
+        <div class="scoreGrid">
+            <p class="subTitleUser">Vous</p>
+            <p class="subTitleComp">Robot</p>
+            <p class="userScore">0</p>
+            <p class="compScore">0</p>
+        </div>
+    </div>
+
+    <h3 class="gagnant">Moi ou Ordi</h3>
+    <p class="reset">Nouvelle Partie?</p>
+    <button  class="resetBtn">OUI</button>
+    <script src="app.js"></script>
+</body>
+</html>

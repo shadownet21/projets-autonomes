@@ -83,3 +83,48 @@
 .nous-rejoindre:hover {
     transform: translateY(-3px);
 }
+
+
+.titre-section-partners {
+    overflow: hidden;
+    width: 100%;
+  /*   background: #fff;   */
+    padding: 20px 0;
+    display: flex;
+}
+
+.partner-track {
+    display: flex;
+    gap: 200px; /* Espace entre chaque logo */
+    width: max-content;
+    animation: defilement 15s linear infinite;
+}
+
+.partner-card {
+    flex-shrink: 0;
+}
+
+.partner-card img {
+    display: flex;
+    height: 250px;  
+    width: 250px;
+    text-align: justify;
+    gap: 350px;
+}
+
+/* L'animation qui décale la piste de la moitié de sa largeur */
+@keyframes defilement {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.partners h2 {
+
+    font-size: 70px;
+
+}

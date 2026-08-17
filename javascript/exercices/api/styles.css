@@ -1,0 +1,31 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.card {
+width: 400px;
+height: 550px;
+background-color: rgb(230, 226, 226);
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+border-radius: 15px;
+border-left: 6px solid green;
+margin: 5px;
+padding-left: 10px;
+
+}
+
+
+.image {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.description {
+ text-align: justify;
+ padding-right: 15px;
+}

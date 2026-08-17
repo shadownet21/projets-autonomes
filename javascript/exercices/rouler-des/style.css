@@ -1,0 +1,80 @@
+body {
+    background-color: blanchedalmond;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gameWindow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.dice:hover {
+    background-color: rgb(255, 255, 253);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.333);
+    cursor: pointer;
+}
+
+.dot {
+    align-self: center;
+    justify-self: center;
+    width: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.user, .comp, .score {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.score {
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    width: 250px;
+    text-align: center;
+}
+
+.scoreGrid {
+    width: 90%;
+    padding-block: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+}
+
+.scoreGrid p {
+    margin: 0;
+}
+
+.titleScore {
+    margin: 10px;
+}
+
+/* .reset, .resetBtn {
+    display: block;
+} */
+
+.bouton-desactive {
+  pointer-events: none; /* Désactive complètement le clic */
+  opacity: 0.6;         /* Rend le bouton visuellement semi-transparent */
+  cursor: not-allowed;  /* Optionnel : affiche un curseur d'interdiction */
+}

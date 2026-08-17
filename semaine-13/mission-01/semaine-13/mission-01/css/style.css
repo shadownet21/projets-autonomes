@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  min-width: 990px;
+}
+#logo {
+  width: 100px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(118, 187, 187);
+  background: linear-gradient(rgb(90, 90, 165), rgb(185, 132, 132));
+}
+
+.titre {
+  font-family: "Playwrite AU VIC Guides", cursive;
+  color: darkgreen;
+}
+
+.titre-p {
+  font-family: "Playwrite AU VIC Guides", cursive;
+  color: rgb(244, 246, 244);
+}
+
+#middle {
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page {
+  background-color: rgb(241, 230, 216);
+}
+
+#page-wrapper {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.image {
+  width: 400px;
+  height: 200px;
+  border-radius: 20px 20px 20px 20px;
+  transition: width 0.3s ease;
+}
+.image:hover {
+  width: 250px;
+}
+
+#image-middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.content-p {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+
+.liste {
+  border: 2px solid black;
+  background-color: darkgray;
+  padding: 50px;
+  width: 50px;
+}
+
+a {
+  font-size: 35px;
+  text-decoration: none;
+  color: darkgreen;
+  transition: 0.3s;
+  font-family: "Playwrite AU VIC Guides", cursive;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.simba {
+  width: 250px;
+  height: 250px;
+  border-radius: 90%;
+}
+
+.sections_links {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+.sections_links li {
+  display: inline-flex;
+  word-spacing: 50px;
+}
+
+.plats {
+  display: flex;
+  gap: 15px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+ 
+
+#section_trois {
+  display: flex;
+  gap: 20px; /* espace entre les paragraphes */
+}
+
+#section_trois p {
+  text-align: justify;
+}
+form input, textarea, option, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+input[type="button"], 
+input[type="reset"] {
+    background-color: #11b16e;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form {
+    display: inline-block;
+}
+
+footer {
+  background-color: rgb(118, 187, 187);
+  background: linear-gradient(rgb(90, 90, 165), rgb(185, 132, 132));
+}
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* .page{
+    border: 25px solid rgb(59, 202, 186);
+    margin-left: 500px;
+    border-radius: 20px 20px 20px 20px;
+    margin-right: 500px;
+} */

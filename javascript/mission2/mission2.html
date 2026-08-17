@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Créez votre structure HTML ici.-->
+    <!--     Gardez la balise script tout en-bas de body. Ce doit être le dernier élément avant la balise fermante  .
+        N'oubliez pas de créer vos fichiers 'style.css' et 'script.js'" -->
+    <h1>
+       Fonctionalité 1 :  Compteur
+    </h1>
+    
+
+    <div class="principal">
+      
+        <h1> n = <span id="valeur_compteur">0</span></h1>
+      
+        <div class="boutons">
+            <button id="decrement">-</button>
+            <button id="increment">+</button> 
+        </div>
+
+        <button id="reinitialiser">Reset</button>
+
+    </div>
+ 
+     <h1>
+       Fonctionalité 2 :  Changeur de couleur
+    </h1>
+
+    <div id="carre">
+
+    </div>
+
+    <div class="boutons_couleur">
+
+        <button id="jaune">Peindre en jaune</button>
+        <button id="vert">Peindre en vert</button>
+        <button id="bleu">Peindre en bleu</button>
+
+    </div>
+
+
+     <h1>
+       Fonctionalité 3 :  Validateur de champ
+    </h1>
+
+    <div class="formulaire">
+                <input type="text" id="zoneDeTexte" placeholder="Entrez votre texte ici">
+                <button id="valider">Valider</button>
+                <button id="reset_formulaire">Reset</button>
+                <span id="message"></span>
+    </div>
+    
+ 
+    <script src="script.js"></script>
+</body>
+
+</html>

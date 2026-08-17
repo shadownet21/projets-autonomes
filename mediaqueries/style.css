@@ -1,0 +1,14 @@
+@media (max-wight:940px) {
+    a {
+        font-size: 30px;
+        display: flex;
+        gap: 50px;
+    }
+
+    body {
+        background-color: blueviolet;
+    };
+}
+
+
+

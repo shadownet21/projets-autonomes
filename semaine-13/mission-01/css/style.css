@@ -3,7 +3,6 @@
 
  font-family: "Playwrite AU VIC Guides", cursive;
  color: darkgreen;
- 
 }
 
 
@@ -31,7 +30,7 @@
     background-color: darkgray;
     padding: 50px;
     width: 95px;
-    
+    text-align: center;
 }
 
 a{
@@ -47,6 +46,12 @@ a:hover {
     cursor: pointer;
     text-transform: capitalize;
     font-size: 50px;
+}
+#s1:hover {
+     color: rgb(34, 189, 29);
+}
+#s2:hover {
+     color:rgb(59, 4, 110);
 }
 
 .sections_links{
@@ -78,6 +83,7 @@ nav ul li{
 #section_trois p {
   
   text-align: justify;
+  border: 5px dotted black;
 }
 /* .page{
     border: 25px solid rgb(59, 202, 186);

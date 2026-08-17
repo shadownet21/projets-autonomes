@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ABM, Répertoire des employés (exercice jour 1)</title>
+<style>
+  :root {
+    --color-bg: #f5f6fa;
+    --color-card: #ffffff;
+    --color-primary: #1d3557;
+    --color-accent: #457b9d;
+    --color-danger: #e63946;
+    --color-success: #2a9d8f;
+    --color-warning: #e9a13b;
+    --color-text: #2b2d42;
+    --color-border: #dcdde1;
+    --radius: 8px;
+    --spacing: 1rem;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: var(--spacing);
+  }
+
+  /* Disposition en grille pour voir toutes les cartes */
+  #conteneur-employes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+  }
+
+  /* Style de base d'une carte */
+  .carte-employe {
+    width: 250px;
+    background-color: var(--color-card);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+    border-left: 6px solid var(--color-border); 
+  }
+
+  /* TODO 3 : Styles selon le statut de l'employé */
+  .carte-employe.statut-actif {
+    border-left-color: var(--color-success);
+  }
+
+  .carte-employe.statut-conge {
+    border-left-color: var(--color-warning);
+  }
+
+  .carte-employe.statut-absent {
+    border-left-color: var(--color-danger);
+  }
+
+  /* Petit badge de statut */
+  .badge-statut {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+  }
+
+  .statut-actif .badge-statut { background-color: var(--color-success); }
+  .statut-conge .badge-statut { background-color: var(--color-warning); }
+  .statut-absent .badge-statut { background-color: var(--color-danger); }
+
+</style>
+</head>
+<body>
+
+<h1>Répertoire des employés, Atelier Boréal Médias</h1>
+
+<div id="conteneur-employes"></div>
+
+<script>
+  const employes = [
+    { id: 1, prenom: "Jean", nom: "Dupont", departement: "Création et Production", statut: "actif", poste: "Graphiste" },
+    { id: 2, prenom: "Amélie", nom: "Tremblay", departement: "Produit et Technologie", statut: "conge", poste: "Développeuse" },
+    { id: 3, prenom: "Marc", nom: "Bouchard", departement: "Opérations et Support Client", statut: "actif", poste: "Agent support" },
+    { id: 4, prenom: "Sophie", nom: "Gagnon", departement: "Création et Production", statut: "absent", poste: "Monteuse vidéo" },
+    { id: 5, prenom: "Karim", nom: "Haddad", departement: "Produit et Technologie", statut: "actif", poste: "Chef de produit" },
+    { id: 6, prenom: "Julie", nom: "Roy", departement: "Opérations et Support Client", statut: "actif", poste: "Réceptionniste" }
+  ];
+
+  const conteneur = document.querySelector("#conteneur-employes");
+
+  employes.forEach((employe) => {
+    // TODO 1 : Création de l'élément carte (div)
+    const carte = document.createElement("div");
+    carte.classList.add("carte-employe");
+
+    // TODO 3 : Ajout d'une classe dynamique selon le statut (statut-actif, statut-conge, statut-absent)
+    carte.classList.add(`statut-${employe.statut}`);
+
+    // Contenu HTML de la carte
+    carte.innerHTML = `
+        <p><strong>N° :</strong> ${employe.id}</p>
+        <p><strong>Nom :</strong> ${employe.prenom} ${employe.nom}</p>
+        <p><strong>Poste :</strong> ${employe.poste}</p>
+        <p><strong>Département :</strong> ${employe.departement}</p>
+        <p><strong>Statut :</strong> <span class="badge-statut">${employe.statut}</span></p>
+    `;
+
+    // TODO 2 : Ajout de la carte créée à l'intérieur du conteneur
+    conteneur.appendChild(carte);
+  });
+</script>
+
+</body>
+</html>
