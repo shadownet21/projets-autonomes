@@ -41,8 +41,6 @@ function afficherData(teamsInfo, gamesInfo) {
  
       const zoneActualites = document.querySelector(".zone-actualites");
 
-      let visitor = 0;
-      let home = 0;
  
       gamesInfo.forEach((game, index) => {
 
