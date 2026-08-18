@@ -195,19 +195,10 @@
   font-size: 100px;
   margin-left: -150px;
   margin-top: -180px;
+  opacity: 0.5;
 }
 
 
-.genrer-citations {
-
-  border-radius: 15px;
-  width: 150px;
-  height: 50px;
-  font-weight: bold;
-  color: white;
-  background-color:gray;
-
-}
 
 .citations {
   font-style: italic;
