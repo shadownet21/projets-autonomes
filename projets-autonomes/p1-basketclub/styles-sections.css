@@ -196,3 +196,19 @@
   margin-left: -150px;
   margin-top: -180px;
 }
+
+
+.genrer-citations {
+
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+  color: white;
+  background-color:gray;
+
+}
+
+.citations {
+  font-style: italic;
+}
