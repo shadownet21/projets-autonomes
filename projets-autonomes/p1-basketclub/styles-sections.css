@@ -176,12 +176,31 @@
   border-radius: 5px;
 }
 
+.badge-secondary-match-date {
+  background-color: rgb(185, 183, 183);
+  color: rgb(0, 0, 0);
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+  height: 22px;
+  width: 150px;
+}
+
 .badge-warning {
   background-color: rgb(249, 212, 0);
   color: black;
   padding: 4px;
   text-align: center;
   border-radius: 5px;
+}
+
+.badge {
+  background-color: rgb(249, 212, 0);  
+  text-align: center;
+  border-radius: 5px;
+  height: 22px;
+  width: 150px;
+  margin-left: 10px;
 }
 
 .ico-nav {
@@ -202,4 +221,18 @@
 
 .citations {
   font-style: italic;
+}
+
+.versus {
+    width: 35px;
+    height: 35px;
+}
+
+.versus-matchs {
+      
+     margin-left: -85px;
+     margin-right: 105px;
+     margin-top: 75px;
+     width: 35px;
+     height: 35px;
 }

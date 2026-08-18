@@ -104,7 +104,7 @@ const visitorTeamInfo = teamsInfo.find((team) => {
  const divDateMatch  = document.createElement("div");
 
 divDateMatch.classList.add("centre");
-divDateMatch.classList.add("badge");
+divDateMatch.classList.add("badge-secondary-match-date");
 
 divDateMatch.textContent = game.date;
 
