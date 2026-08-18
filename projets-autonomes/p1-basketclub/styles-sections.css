@@ -236,3 +236,51 @@
      width: 35px;
      height: 35px;
 }
+#citation,
+#auteur {
+    opacity: 1;
+}
+
+
+/* DISPARITION */
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+    color: black;
+}
+
+
+/* APPARITION */
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+    color: black;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeOut {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}

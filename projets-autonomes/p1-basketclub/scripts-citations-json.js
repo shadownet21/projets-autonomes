@@ -1,58 +1,127 @@
-const API_BASE_URL = 'https://dummyjson.com';
+// URL du fichier JSON local
+const JSON_URL = "citations_inspirantes_50.json";
 
-// Fonction pour récupérer une citation aléatoire
-async function getRandomQuote() {
+// Éléments HTML
+const citationElement = document.getElementById("citation");
+const auteurElement = document.getElementById("auteur");
+
+// Tableau qui contiendra les citations du fichier JSON
+let citations = [];
+
+// Index de la citation actuellement affichée
+let indexCitation = 0;
+
+
+// ===============================
+// CHARGEMENT DU FICHIER JSON
+// ===============================
+
+async function chargerCitations() {
+
     try {
-        const response = await fetch(`${API_BASE_URL}/quotes/random`);
+
+        const response = await fetch(JSON_URL);
 
         if (!response.ok) {
-            throw new Error(`Erreur HTTP: ${response.status}`);
+            throw new Error(`Erreur HTTP : ${response.status}`);
         }
 
-        const data = await response.json();
+        citations = await response.json();
 
-        // data = { id, quote, author }
-        return data;
-    } catch (error) {
-        console.error('Erreur lors de la récupération de la citation:', error);
-        throw error;
-    }
-}
-
-// Fonction pour rechercher plusieurs citations aléatoires
-// (DummyJSON n'a pas de recherche par auteur, donc on récupère une page
-// et on filtre côté client — voir la note plus bas si tu veux vraiment filtrer par auteur)
-async function getRandomQuotes(limit = 10) {
-    try {
-        const response = await fetch(`${API_BASE_URL}/quotes/random/${limit}`);
-
-        if (!response.ok) {
-            throw new Error(`Erreur HTTP: ${response.status}`);
+        // Vérification
+        if (!Array.isArray(citations) || citations.length === 0) {
+            throw new Error("Le fichier JSON ne contient aucune citation.");
         }
 
-        const data = await response.json();
-        return data; // tableau de citations
+        // Afficher immédiatement la première citation
+        afficherCitation();
+
+        // Changer de citation toutes les 5 secondes
+        setInterval(changerCitation, 5000);
+
     } catch (error) {
-        console.error('Erreur lors de la récupération des citations:', error);
-        throw error;
+
+        console.error("Erreur lors du chargement des citations :", error);
+
+        citationElement.textContent =
+            "Impossible de charger les citations.";
+
+        auteurElement.textContent = "";
     }
 }
 
 
-async function obtenirCitation() {
-    try {
-        const quoteData = await getRandomQuote();
-        const citation = document.getElementById('citation');
-        const auteur = document.getElementById('auteur');
-                 
-                citation.style.color = 'black';
-                auteur.style.color = 'black';
+// ===============================
+// AFFICHER UNE CITATION
+// ===============================
 
-                citation.textContent = `"${quoteData.quote}"`;
-                citation.classList.add("citations");
-                auteur.textContent = `From :  ${quoteData.author}`;
-    } catch (error) {
-        document.getElementById('citations').innerHTML +=
-            `<p style="color:red;">Impossible de charger la citation. Réessaie plus tard.</p>`;
-    }
+function afficherCitation() {
+
+    const citationActuelle = citations[indexCitation];
+
+    citationElement.textContent =
+        `"${citationActuelle.citation}"`;
+
+    auteurElement.textContent =
+        `— ${citationActuelle.auteur}`;
+
 }
+
+
+// ===============================
+// CHANGER DE CITATION
+// ===============================
+
+function changerCitation() {
+
+    // FADE OUT
+    citationElement.classList.add("fade-out");
+    auteurElement.classList.add("fade-out");
+
+
+    // Attendre la fin du fade-out
+    setTimeout(() => {
+
+        // Passer à la citation suivante
+        indexCitation++;
+
+        // Si on arrive à la fin du tableau,
+        // on recommence à zéro
+        if (indexCitation >= citations.length) {
+            indexCitation = 0;
+        }
+
+
+        // Modifier le texte
+        afficherCitation();
+
+
+        // Retirer fade-out
+        citationElement.classList.remove("fade-out");
+        auteurElement.classList.remove("fade-out");
+
+
+        // Ajouter fade-in
+        citationElement.classList.add("fade-in");
+        auteurElement.classList.add("fade-in");
+
+
+        // Nettoyer la classe après l'animation
+        setTimeout(() => {
+
+            citationElement.classList.remove("fade-in");
+            auteurElement.classList.remove("fade-in");
+
+        }, 1000);
+
+
+    }, 1000);
+
+}
+
+
+// ===============================
+// DÉMARRAGE
+// ===============================
+
+chargerCitations();
