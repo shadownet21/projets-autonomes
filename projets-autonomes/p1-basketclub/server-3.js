@@ -143,6 +143,15 @@ if (visitorTeamInfo) {
         visitorTeamScore
     );
 
+     // Image "VS" locale entre les deux équipes
+    const vsImage = document.createElement("img");
+    vsImage.src = "images/versus.png"; 
+    vsImage.alt = "VS";
+    vsImage.classList.add("versus-matchs");
+  
+    
+
+    gameContainer.appendChild(vsImage);
     gameContainer.appendChild(visitorTeamDiv);
 }
 
