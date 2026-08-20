@@ -112,10 +112,10 @@ function changerCitation() {
             citationElement.classList.remove("fade-in");
             auteurElement.classList.remove("fade-in");
 
-        }, 1000);
+        }, 3000);
 
 
-    }, 1000);
+    }, 3000);
 
 }
 
