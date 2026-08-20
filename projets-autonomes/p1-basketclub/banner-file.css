@@ -1,27 +1,28 @@
     
 .banner {
   width: 100%;
-  /* height: 50vh; */
+  height: 50vh;
+  background-image: url("/images/tj-dragotta-Gl0jBJJTDWs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
- .banner img {
-    width: 100%;
-    height: auto;
-    background-size: cover; 
-} 
+
 
 /* Bloc flouté centré */
 .texte-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 15%;
   max-width: 900px;
   padding: 1.5rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(158, 157, 157, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -31,9 +32,6 @@
 }
 
 .bouton-image {
-    position: absolute;
-    top: 65%;
-    left: 38%;
     background-color: rgba(246, 152, 1, 0.9);
     height: 55px;
     width: 160px;
