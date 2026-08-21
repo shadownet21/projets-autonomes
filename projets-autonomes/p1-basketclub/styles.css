@@ -722,11 +722,12 @@ body {
         gap: 80px;
         flex-direction: row;
         flex-wrap: wrap;
+        
     }
 .club-junior {
         width: 300px;
         height: 400px;
-        background-color: #eff1f7;
+        background-color: #8c8e92;
         border-radius: 6px;
         display: grid;
         animation-name: myAnimation;

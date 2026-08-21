@@ -125,3 +125,27 @@ function changerCitation() {
 // ===============================
 
 chargerCitations();
+
+
+console.log(`
+🏀 ========================================= 🏀
+
+       INITIATIVE AVENIR
+       BASKETBALL CLUB
+
+       Révèle ton potentiel.
+
+🏀 ========================================= 🏀
+`);
+
+console.log(
+    "%cSite officiel :%c Initiative Avenir Basketball Club",
+    "color:#c4622d;font-weight:bold;",
+    "color:#2e5e4e;"
+);
+
+console.log(
+    "%cDéveloppé avec ❤️ et JavaScript",
+    "color:#888;font-style:italic;",
+     "%cDéveloppé par Marc Maurice Freeman"
+);
